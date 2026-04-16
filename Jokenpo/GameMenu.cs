@@ -9,8 +9,8 @@ namespace Jokenpo
         {
             Console.Clear();
             //GetPlayers.GetNameOfPlayers();
-            //Tourneament.Start();
-            Play.PrintWinnerMove();
+            // Tourneament.Start();
+            
         }
 
         

@@ -31,9 +31,9 @@ namespace Jokenpo
             while (true)
             {
                 Console.Write($"Define the number of players(must be even) : ");
-                string rawInput = Console.ReadLine();
+                string? rawInput = Console.ReadLine();
 
-                if (int.TryParse(rawInput, out input) && IsValidQuantity(input))
+                if (rawInput != null && int.TryParse(rawInput, out input) && IsValidQuantity(input))
                 {
                     return input;
                 }
