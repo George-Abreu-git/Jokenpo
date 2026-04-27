@@ -8,8 +8,7 @@ namespace Jokenpo
         public static void MenuExe ()
         {
             Console.Clear();
-            //GetPlayers.GetNameOfPlayers();
-            // Tourneament.Start();
+            Tourneament.Start();
             
         }
 

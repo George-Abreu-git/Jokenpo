@@ -44,9 +44,8 @@ namespace Jokenpo
             
         }
 
-        public static void PrintWinnerMove()
-        {
-            Console.WriteLine(CheckMove(Move.Paper, Move.Scissors));
-        }
+
+       
+        
     }
 }

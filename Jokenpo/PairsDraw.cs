@@ -4,20 +4,20 @@ namespace Jokenpo
 {
     public class PairsDraw
     {
-        public static string[][] PairsStart()
-        {
-            string[] players = GetPlayers.GetNameOfPlayers();
-            string[] rndPlayers = PairsRandom(players);
-            string[][] pairs = CreatePairs(rndPlayers);
+    //     public static string[][] PairsStart()
+    //     {
+    //         string[] players = GetPlayers.GetNameOfPlayers();
+    //         string[] rndPlayers = PairsRandom(players);
+    //         string[][] pairs = CreatePairs(rndPlayers);
             
 
 
-            return pairs;
-        }
+            // return pairs;
+        // }
 
 
 
-        private static string[][] CreatePairs(string[] players)
+        public static string[][] CreatePairs(string[] players)
         {
             int pairCount = players.Length / 2;
             string[][] pairs = new string[pairCount][];
@@ -36,7 +36,7 @@ namespace Jokenpo
 
         private static readonly Random _random = new Random();
 
-        private static string [] PairsRandom(string[] players)
+        public static string [] PairsRandom(string[] players)
         {
             
            

@@ -4,15 +4,19 @@ namespace Jokenpo
 {
     public class Tourneament
     {
+
+        
+
         public static void Start()
         {
-            string[][] pairs = PairsDraw.PairsStart();
+            string [] players = GetPlayers.GetNameOfPlayers();
 
-            foreach (var pair in pairs)
+            while(players.Length > 1)
             {
-                Console.WriteLine($"{pair[0]} x {pair[1]}");
+                string[] rndPlayers = PairsDraw.PairsRandom(players);
+                string[][] pairs = PairsDraw.CreatePairs(rndPlayers);
+                
             }
-
 
             
         }
