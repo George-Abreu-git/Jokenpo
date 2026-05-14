@@ -6,12 +6,7 @@ namespace Jokenpo
     public class Play
     {
 
-        enum Result
-        {
-            Move1 = 1,
-            Move2 = 2,
-            BreakEven = 3
-        }
+        private static Random numRandom = new Random();
 
         enum Move
         {
@@ -21,31 +16,40 @@ namespace Jokenpo
         }
         
 
-        private static Result CheckMove (Move move1, Move move2)
+        public static string DetermineWinner (int move1, int move2)
         {
+            Move player1 = (Move)move1;
+            Move player2 = (Move)move2;
 
-            if (move1 == Move.Paper && move2 == Move.Rock)
+
+            if (player1 == Move.Paper && player2 == Move.Rock)
             {
-                return Result.Move1 ;
+                return $"Player1 wins" ;
             }
-            if (move1 == Move.Rock && move2 == Move.Scissors)
+            if (player1 == Move.Rock && player2 == Move.Scissors)
             {
-                return Result.Move1 ;
+                return $"Player1 wins" ;
             }
-            if (move1 == Move.Scissors && move2 == Move.Paper)
+            if (player1 == Move.Scissors && player2 == Move.Paper)
             {
-                return Result.Move1 ;
+                return $"Player1 wins" ;
             }
-            if (move1 == move2)
+            if (player1 == player2)
             {
-                return Result.BreakEven;
+                return "Draw, play again";
             }
-            return Result.Move2;
+            return $"Player2 wins";
             
         }
-
-
-       
         
+
+        public static int RandomPlay ()
+        {
+
+            return numRandom.Next(1,4);
+            
+        }       
+        
+       
     }
 }
