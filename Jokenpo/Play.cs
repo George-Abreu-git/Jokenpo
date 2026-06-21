@@ -16,7 +16,7 @@ namespace Jokenpo
         }
         
 
-        public static string DetermineWinner (int move1, int move2)
+        public static int DetermineWinner (int move1, int move2)
         {
             Move player1 = (Move)move1;
             Move player2 = (Move)move2;
@@ -24,21 +24,21 @@ namespace Jokenpo
 
             if (player1 == Move.Paper && player2 == Move.Rock)
             {
-                return $"Player1 wins" ;
+                return (int)Move.Paper ;
             }
             if (player1 == Move.Rock && player2 == Move.Scissors)
             {
-                return $"Player1 wins" ;
+                return (int)Move.Rock ;
             }
             if (player1 == Move.Scissors && player2 == Move.Paper)
             {
-                return $"Player1 wins" ;
+                return (int)Move.Scissors ;
             }
             if (player1 == player2)
             {
-                return "Draw, play again";
+                return (int)player2;
             }
-            return $"Player2 wins";
+            return 0;
             
         }
         
@@ -50,6 +50,7 @@ namespace Jokenpo
             
         }       
         
+       
        
     }
 }

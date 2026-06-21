@@ -4,15 +4,15 @@ namespace Jokenpo
 {
     public class PairsDraw
     {
-    //     public static string[][] PairsStart()
-    //     {
-    //         string[] players = GetPlayers.GetNameOfPlayers();
-    //         string[] rndPlayers = PairsRandom(players);
-    //         string[][] pairs = CreatePairs(rndPlayers);
+        // public static string[][] PairsStart()
+        // {
+        //     string[] players = GetPlayers.GetNameOfPlayers();
+        //     string[] rndPlayers = PairsRandom(players);
+        //     string[][] pairs = CreatePairs(rndPlayers);
             
 
 
-            // return pairs;
+        //     return pairs;
         // }
 
 
