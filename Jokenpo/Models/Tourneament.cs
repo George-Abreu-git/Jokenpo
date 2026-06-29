@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Dynamic;
 
-namespace Jokenpo
+namespace Jokenpo.Models
 {
     public class Tourneament
     {
@@ -17,10 +17,10 @@ namespace Jokenpo
             while(players.Length > 1)
             {
                 string[] rndPlayers = PairsDraw.PairsRandom(players);
-                string[][] pairs = PairsDraw.CreatePairs(rndPlayers);
+                
                 string [] winner = [];
 
-                Partida(pairs);
+                Partida(rndPlayers);
 
 
             }
@@ -36,7 +36,7 @@ namespace Jokenpo
             int move1 = 0;
             int move2 = 0;
             
-            foreach (pair in pairs)
+            foreach(string []pair in pairs)
             {
                 while (Play.DetermineWinner(move1, move2) == 0)
             {
@@ -52,10 +52,10 @@ namespace Jokenpo
         }
 
 
-        public static string []JogadaJogador(string [][]pairs)
-        {
-            for []
-        }
+        // public static string []JogadaJogador(string [][]pairs)
+        // {
+        //     for []
+        // }
 
     }
 
