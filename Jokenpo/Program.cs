@@ -1,4 +1,5 @@
 ﻿using System;
+using Jokenpo.Models;
 
 
 namespace Jokenpo;

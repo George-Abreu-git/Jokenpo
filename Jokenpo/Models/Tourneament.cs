@@ -8,7 +8,7 @@ namespace Jokenpo.Models
 
         
 
-        public static string []Start()
+        public static void Start()
         {
             string [] players = GetPlayers.GetNameOfPlayers();
             
@@ -16,46 +16,21 @@ namespace Jokenpo.Models
 
             while(players.Length > 1)
             {
-                string[] rndPlayers = PairsDraw.PairsRandom(players);
                 
-                string [] winner = [];
+                players = PairsDraw.PairsRandom(players);
+                string[][] pairs = PairsDraw.CreatePairs(players);
+                string[] winners = JogarRodadas(pairs);
 
-                Partida(rndPlayers);
-
+                players = winners;
 
             }
+            
 
-            return players;
+            Console.WriteLine($"Campeão é {players}");
             
         }
 
 
-        public static int Partida (string [][] pairs)
-        {
-            int ganhador = 0;
-            int move1 = 0;
-            int move2 = 0;
-            
-            foreach(string []pair in pairs)
-            {
-                while (Play.DetermineWinner(move1, move2) == 0)
-            {
-                move1 = Play.RandomPlay();
-                move2 = Play.RandomPlay();
-                
-                ganhador = Play.DetermineWinner(move1,move2);
-            }
-            return ganhador;
-            }
-            
-            return ganhador;
-        }
-
-
-        // public static string []JogadaJogador(string [][]pairs)
-        // {
-        //     for []
-        // }
 
     }
 

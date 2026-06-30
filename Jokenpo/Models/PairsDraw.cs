@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Jokenpo
+namespace Jokenpo.Models
 {
     public class PairsDraw
     {

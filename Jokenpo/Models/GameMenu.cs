@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace Jokenpo
+namespace Jokenpo.Models
 {
     internal class GameMenu
     {

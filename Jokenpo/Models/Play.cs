@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace Jokenpo
+namespace Jokenpo.Models
 {
     public class Play
     {
@@ -36,9 +36,13 @@ namespace Jokenpo
             }
             if (player1 == player2)
             {
-                return (int)player2;
+                return 0;
             }
-            return 0;
+            else
+            {
+                return move2;    
+            }
+            
             
         }
         
