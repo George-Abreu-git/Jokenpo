@@ -8,7 +8,7 @@ namespace Jokenpo.Models
         public static void MenuExe ()
         {
             Console.Clear();
-            Tourneament.Start();
+            Tournament.Start();
             
         }
 

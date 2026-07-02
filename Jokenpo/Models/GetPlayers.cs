@@ -30,7 +30,7 @@ namespace Jokenpo.Models
 
             while (true)
             {
-                Console.Write($"Define the number of players(must be even) : ");
+                Console.Write($"Digite a quantidade de jogadores (número par) : ");
                 string? rawInput = Console.ReadLine();
 
                 if (rawInput != null && int.TryParse(rawInput, out input) && IsValidQuantity(input))
@@ -38,7 +38,7 @@ namespace Jokenpo.Models
                     return input;
                 }
                 Console.Clear();
-                Console.WriteLine($"Enter a even number.");
+                Console.WriteLine($"Apenas número par.");
 
             }
         }

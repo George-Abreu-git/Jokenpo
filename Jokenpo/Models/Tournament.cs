@@ -26,7 +26,7 @@ namespace Jokenpo.Models
             }
 
 
-            Console.WriteLine($"The champion is {players[0]}");
+            Console.WriteLine($"O campeão é {players[0]}");
 
         }
 
