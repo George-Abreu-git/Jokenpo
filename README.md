@@ -56,16 +56,16 @@ Jokenpô
 - **Random move** — automatically generates the computer's move or for absent players
 - **Move enum** — represents the `Rock`, `Paper`, and `Scissors` options in a typed way
 - **Tournament logic** — main game loop structure *(in progress)*
+- **Full tournament system** — eliminate players until a single winner remains
+- **Matches between duos** — running the rounds between the generated pairs
 
 ---
 
 ## ⏳ What's left to build
 
 - **Bye structure** — handling for when the number of players is odd
-- **Matches between duos** — running the rounds between the generated pairs
 - **Winners and losers list** — score tracking and display per round
 - **Number of rounds** — let the user define the number of rounds per match
-- **Full tournament system** — eliminate players until a single winner remains
 - **Menu customization** — improve the console interface with clearer options
 
 ---
@@ -94,15 +94,19 @@ Jokenpô
 
 ```
 Jokenpo/
-├── Jokenpo/
-│   ├── Classes/
-│   │   ├── PlayerSetup.cs     # Player input, validation, and creation
-│   │   ├── Matchmaking.cs     # Shuffling and duo generation
-│   │   ├── Tournament.cs      # Main tournament logic
-│   │   └── Menu.cs            # Options menu (in progress)
-│   └── Program.cs             # Application entry point
-├── Jokenpo.slnx
-└── README.md
+├── Models/                 # Application domain classes
+│   ├── GameMenu.cs         # Main game menu
+│   ├── GetPlayers.cs       # Player registration/input
+│   ├── PairsDraw.cs        # Match pairing draw
+│   ├── Play.cs             # Match execution logic
+│   └── Tournament.cs       # Tournament logic (rounds, bye, etc.)
+├── Jokenpo.csproj          # Project configuration file (.NET)
+├── Program.cs              # Application entry point
+├── Jokenpo.slnx            # Solution file
+├── .gitattributes          # Git attributes configuration
+├── .gitignore               # Files/folders ignored by Git
+├── README.md                # Documentation (English)
+└── README.pt-br.md          # Documentation (Portuguese)
 ```
 
 ---

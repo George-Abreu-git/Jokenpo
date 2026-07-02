@@ -66,7 +66,6 @@ Jokenpô
 - **Estrutura de Bye** — tratamento para quando o número de jogadores é ímpar
 - **Lista de vencedores e perdedores** — controle e exibição do placar por rodada
 - **Quantidade de rodadas** — permitir que o usuário defina o número de rodadas por partida
-
 - **Personalização do menu** — melhorar a interface do console com opções mais claras
 
 ---
@@ -95,15 +94,19 @@ Jokenpô
 
 ```
 Jokenpo/
-├── Jokenpo/
-│   ├── Classes/
-│   │   ├── PlayerSetup.cs     # Input, validação e criação de jogadores
-│   │   ├── Matchmaking.cs     # Embaralhamento e geração de duplas
-│   │   ├── Tournament.cs      # Lógica principal do campeonato
-│   │   └── Menu.cs            # Menu de opções (em desenvolvimento)
-│   └── Program.cs             # Ponto de entrada da aplicação
-├── Jokenpo.slnx
-└── README.md
+├── Models/                 # Classes de domínio da aplicação
+│   ├── GameMenu.cs         # Menu principal do jogo
+│   ├── GetPlayers.cs       # Cadastro/obtenção dos jogadores
+│   ├── PairsDraw.cs        # Sorteio dos confrontos (pares)
+│   ├── Play.cs             # Lógica de execução das partidas
+│   └── Tournament.cs       # Lógica do torneio (rodadas, bye, etc.)
+├── Jokenpo.csproj          # Arquivo de configuração do projeto (.NET)
+├── Program.cs              # Ponto de entrada da aplicação
+├── Jokenpo.slnx            # Solution file
+├── .gitattributes          # Configurações de atributos do Git
+├── .gitignore               # Arquivos/pastas ignorados pelo Git
+├── README.md                # Documentação (inglês)
+└── README.pt-br.md          # Documentação (português)
 ```
 
 ---
