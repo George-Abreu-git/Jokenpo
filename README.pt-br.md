@@ -22,7 +22,7 @@ Jokenpô
 │   ├── ⏳ Estrutura de campeonato com Bye
 │   ├── ✅ Partidas entre duplas
 │   ├── ⏳ Lista de vencedores e perdedores
-│   ├── ⏳ Quantidade de rodadas definida pelo usuário
+│   ├── ✅ Quantidade de rodadas definida pelo usuário
 │   ├── ✅ Sistema de campeonato até 1 vencedor
 │   └── ⏳ Personalização do menu
 │

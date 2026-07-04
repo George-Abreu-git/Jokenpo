@@ -22,7 +22,7 @@ Jokenpô
 │   ├── ⏳ Tournament structure with Bye
 │   ├── ✅ Matches between duos
 │   ├── ⏳ Winners and losers list
-│   ├── ⏳ User-defined number of rounds
+│   ├── ✅ User-defined number of rounds
 │   ├── ✅ Single-winner tournament system
 │   └── ⏳ Menu customization
 │
