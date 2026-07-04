@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Dynamic;
+using System.Reflection.PortableExecutable;
 
 namespace Jokenpo.Models
 {
@@ -11,6 +12,7 @@ namespace Jokenpo.Models
         public static void Start()
         {
             string[] players = GetPlayers.GetNameOfPlayers();
+            int rounds = GetRounds.SetRounds();
 
 
 
@@ -19,9 +21,10 @@ namespace Jokenpo.Models
 
                 players = PairsDraw.PairsRandom(players);
                 string[][] pairs = PairsDraw.CreatePairs(players);
-                string[] winners = RunRound(pairs);
+                string[] winners = RunRound(pairs, rounds);
 
                 players = winners;
+
 
             }
 
@@ -32,15 +35,55 @@ namespace Jokenpo.Models
 
 
         //Executa rodadas a partir de Match
-        private static string[] RunRound(string[][] pairs)
+        private static string[] RunRound(string[][] pairs, int rounds)
         {
             //atribui o tamanho de pairs em winners
             string[] winners = new string[pairs.Length];
+            //int victoryPlayer1 = 0;
+            //int victoryPlayer2 = 0;
+
+
 
             for (int i = 0; i < pairs.Length; i++)
             {
-                winners[i] = Match(pairs[i]);
+                int victoryPlayer1 = 0;
+                int victoryPlayer2 = 0;
+
+                string player1 = pairs[i][0];
+                string player2 = pairs[i][1];
+
+
+
+                while (victoryPlayer1 != rounds && victoryPlayer2 != rounds)
+                {
+                    winners[i] = Match(pairs[i]);
+
+                    if (winners[i] == player1)
+                    {
+                        victoryPlayer1++;
+                    }
+                    else
+                    {
+                        victoryPlayer2++;
+                    }
+
+
+
+                }
+
+                if (victoryPlayer1 == rounds)
+                {
+                    winners[i] = player1;
+                }
+                else
+                {
+                    winners[i] = player2;
+                }
+
+
+
             }
+
 
             return winners;
         }
@@ -56,6 +99,7 @@ namespace Jokenpo.Models
             int move2 = 0;
             int result = 0;
 
+
             //enquanto result for empate repete jogadas
             while (result == 0)
             {
@@ -63,6 +107,7 @@ namespace Jokenpo.Models
                 move2 = Play.RandomPlay();
 
                 result = Play.DetermineWinner(move1, move2);
+
             }
 
             if (result == move1)
@@ -73,6 +118,9 @@ namespace Jokenpo.Models
             {
                 return player2;
             }
+
+
+
 
         }
 
