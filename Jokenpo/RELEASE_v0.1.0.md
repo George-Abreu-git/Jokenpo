@@ -1,60 +1,61 @@
-# Jokenpô — v0.1.0 🎮✂️📄🪨
+# Jokenpo — v0.1.0 🎮✂️📄🪨
+> 🌐 Versão em português:[Jokenpo/RELEASE_v0.1.0.md](./Jokenpo/RELEASE_v0.1.0.pt-br.md)
 
-Primeira versão publicada do projeto **Jokenpô**, um sistema de torneio de Pedra-Papel-Tesoura desenvolvido em C#/.NET.
+First public release of **Jokenpo**, a Rock–Paper–Scissors tournament system developed in C#/.NET.
 
-Esta é uma versão inicial, focada em validar a lógica do torneio via console. Ainda não há interface gráfica ou web — o objetivo deste marco é ter o "motor" do jogo funcionando de ponta a ponta.
+This is an initial release focused on validating the tournament logic through a console application. There is no graphical or web interface yet—the goal of this milestone is to have the game's core engine working end-to-end.
 
-## ✅ Funcionalidades desta versão
+## ✅ Features included in this release
 
-- Execução via **linha de comando (console)**.
-- Solicita ao usuário a **quantidade de jogadores** que participarão do torneio.
-- Executa o torneio e define um vencedor.
-- Exibe o campeão ao final, identificado como **"Jogador N"** (N = número do jogador).
+- Runs through the **command-line interface (CLI)**.
+- Prompts the user to enter the **number of players** participating in the tournament.
+- Executes the tournament and determines a winner.
+- Displays the champion at the end, identified as **"Player N"** (where N is the player's number).
 
-## 🔜 O que ainda não está incluído
+## 🔜 What's not included yet
 
-Para deixar claro o escopo deste primeiro momento:
+To clearly define the scope of this first release:
 
-- Sem interface gráfica ou front-end (somente CLI).
-- Sem nomes personalizados para os jogadores (identificação apenas por número).
-- Sem persistência de dados (histórico de torneios, placares, etc.).
-- Sem API REST — o projeto ainda roda localmente como aplicação de console.
+- No graphical interface or front-end (CLI only).
+- No custom player names (players are identified by number only).
+- No data persistence (tournament history, scores, etc.).
+- No REST API—the project currently runs locally as a console application.
 
-Essas funcionalidades fazem parte do roadmap do projeto e serão endereçadas em versões futuras, conforme a evolução das fases:
+These features are part of the project's roadmap and will be implemented in future releases as development progresses through the following phases:
 
-1. ✅ Lógica de torneio via console (esta versão)
-2. Refatoração com Orientação a Objetos
-3. Exposição como API REST
-4. Front-end em React
-5. Containerização e deploy
+1. ✅ Console-based tournament logic (this release)
+2. Object-Oriented Programming refactoring
+3. REST API implementation
+4. React front-end
+5. Containerization and deployment
 
-## 💻 Como executar
+## 💻 How to run
 
-Este release inclui builds para diferentes ambientes:
+This release includes builds for different environments.
 
-### Windows (recomendado — não requer .NET instalado)
+### Windows (recommended — .NET not required)
 
-Build *self-contained*, já inclui o runtime do .NET:
+A **self-contained** build that already includes the .NET runtime.
 
-1. Baixe e extraia a pasta `net10.0/win-x64/publish/`.
-2. Execute `Jokenpo.exe`.
+1. Download and extract the `net10.0/win-x64/publish/` folder.
+2. Run `Jokenpo.exe`.
 
-### Windows / Linux (requer .NET 10 Runtime instalado)
+### Windows / Linux (requires .NET 10 Runtime)
 
-Build *framework-dependent*, menor em tamanho, mas exige o [.NET 10 Runtime](https://dotnet.microsoft.com/download) instalado na máquina:
+A **framework-dependent** build with a smaller size, which requires the **.NET 10 Runtime** to be installed.
 
-1. Baixe a pasta `net10.0/publish/`.
-2. Execute:
+1. Download the `net10.0/publish/` folder.
+2. Run:
    - Linux: `./Jokenpo`
    - Windows: `dotnet Jokenpo.dll`
 
-### Requisitos
+### Requirements
 
-| Build | Requisito |
+| Build | Requirement |
 |---|---|
-| `win-x64/publish` | Nenhum (self-contained) |
-| `net10.0/publish` | .NET 10.0 Runtime instalado |
+| `win-x64/publish` | None (self-contained) |
+| `net10.0/publish` | .NET 10 Runtime installed |
 
-## 📌 Observações
+## 📌 Notes
 
-Esta é uma versão de desenvolvimento (v0.1.0), destinada a documentar o progresso do projeto e servir de base para as próximas iterações. Feedbacks e sugestões são bem-vindos via Issues do repositório.
+This is a development release (v0.1.0) intended to document the project's progress and provide the foundation for future iterations. Feedback and suggestions are welcome through the repository's Issues.

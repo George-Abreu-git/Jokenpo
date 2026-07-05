@@ -25,7 +25,7 @@ Esta versão tem como objetivo validar toda a lógica principal do jogo. Recurso
 
 📄 Para consultar todas as informações da versão, acesse:
 
-- [`Jokenpo/RELEASE_v0.1.0.md`](./Jokenpo/RELEASE_v0.1.0.md)
+- [`Jokenpo/RELEASE_v0.1.0.md`](./Jokenpo/RELEASE_v0.1.0.pt-br.md)
 
 ---
 
