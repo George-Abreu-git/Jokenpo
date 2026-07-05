@@ -1,4 +1,4 @@
-# Jokenpô — v0.1.0 🎮✂️📄🪨
+# Jokenpô — v0.2.0 🎮✂️📄🪨
 
 Primeira versão publicada do projeto **Jokenpô**, um sistema de torneio de Pedra-Papel-Tesoura desenvolvido em C#/.NET.
 
@@ -10,6 +10,7 @@ Esta é uma versão inicial, focada em validar a lógica do torneio via console.
 - Solicita ao usuário a **quantidade de jogadores** que participarão do torneio.
 - Executa o torneio e define um vencedor.
 - Exibe o campeão ao final, identificado como **"Jogador N"** (N = número do jogador).
+- Faz a sequência com pausas de 2 segundos para visualizar melhor as partidas acontecendo.
 
 ## 🔜 O que ainda não está incluído
 
@@ -57,4 +58,4 @@ Build *framework-dependent*, menor em tamanho, mas exige o [.NET 10 Runtime](htt
 
 ## 📌 Observações
 
-Esta é uma versão de desenvolvimento (v0.1.0), destinada a documentar o progresso do projeto e servir de base para as próximas iterações. Feedbacks e sugestões são bem-vindos via Issues do repositório.
+Esta é uma versão de desenvolvimento (v0.2.0), destinada a documentar o progresso do projeto e servir de base para as próximas iterações. Feedbacks e sugestões são bem-vindos via Issues do repositório.

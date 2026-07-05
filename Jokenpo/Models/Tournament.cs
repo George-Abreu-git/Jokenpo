@@ -39,8 +39,6 @@ namespace Jokenpo.Models
         {
             //atribui o tamanho de pairs em winners
             string[] winners = new string[pairs.Length];
-            //int victoryPlayer1 = 0;
-            //int victoryPlayer2 = 0;
 
 
 
@@ -54,17 +52,30 @@ namespace Jokenpo.Models
 
 
 
+
                 while (victoryPlayer1 != rounds && victoryPlayer2 != rounds)
                 {
                     winners[i] = Match(pairs[i]);
 
+                    Console.WriteLine($"{player1} x {player2}");
+
+
+
+
+
                     if (winners[i] == player1)
                     {
                         victoryPlayer1++;
+                        Thread.Sleep(2000);
+                        Console.WriteLine($"{player1} ganhou {victoryPlayer1} rodadas!");
+
                     }
                     else
                     {
                         victoryPlayer2++;
+                        Thread.Sleep(2000);
+                        Console.WriteLine($"{player2} ganhou {victoryPlayer2} rodadas!");
+    
                     }
 
 
@@ -74,10 +85,15 @@ namespace Jokenpo.Models
                 if (victoryPlayer1 == rounds)
                 {
                     winners[i] = player1;
+                    Thread.Sleep(2000);
+                    Console.WriteLine($"{player1} ganhou!");
+
                 }
                 else
                 {
                     winners[i] = player2;
+                    Thread.Sleep(2000);
+                    Console.WriteLine($"{player2} ganhou!");
                 }
 
 

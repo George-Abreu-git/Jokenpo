@@ -1,5 +1,5 @@
-# Jokenpo — v0.1.0 🎮✂️📄🪨
-> 🌐 Versão em português: [RELEASE_v0.1.0.pt-br.md](./RELEASE_v0.1.0.pt-br.md)
+# Jokenpo — v0.2.0 🎮✂️📄🪨
+> 🌐 Versão em português: [RELEASE_v0.2.0.pt-br.md](./RELEASE_v0.2.0.pt-br.md)
 
 First public release of **Jokenpo**, a Rock–Paper–Scissors tournament system developed in C#/.NET.
 
@@ -11,6 +11,7 @@ This is an initial release focused on validating the tournament logic through a 
 - Prompts the user to enter the **number of players** participating in the tournament.
 - Executes the tournament and determines a winner.
 - Displays the champion at the end, identified as **"Player N"** (where N is the player's number).
+- Adds 2-second pauses between steps for a clearer view of matches as they happen.
 
 ## 🔜 What's not included yet
 
@@ -58,4 +59,4 @@ A **framework-dependent** build with a smaller size, which requires the **.NET 1
 
 ## 📌 Notes
 
-This is a development release (v0.1.0) intended to document the project's progress and provide the foundation for future iterations. Feedback and suggestions are welcome through the repository's Issues.
+This is a development release (v0.2.0) intended to document the project's progress and provide the foundation for future iterations. Feedback and suggestions are welcome through the repository's Issues.
