@@ -81,6 +81,7 @@ Jokenpô
 - **Lógica do campeonato** — estrutura principal do loop do jogo *(em desenvolvimento)*
 - **Partidas entre duplas** — execução das rodadas entre os pares gerados
 - **Sistema de campeonato completo** — eliminar jogadores até restar 1 único vencedor
+- **Quantidade de rodadas** — permitir que o usuário defina o número de rodadas por partida
 
 ---
 
@@ -88,7 +89,6 @@ Jokenpô
 
 - **Estrutura de Bye** — tratamento para quando o número de jogadores é ímpar
 - **Lista de vencedores e perdedores** — controle e exibição do placar por rodada
-- **Quantidade de rodadas** — permitir que o usuário defina o número de rodadas por partida
 - **Personalização do menu** — melhorar a interface do console com opções mais claras
 
 ---

@@ -82,6 +82,7 @@ Jokenpô
 - **Tournament logic** — main game loop structure *(in progress)*
 - **Full tournament system** — eliminate players until a single winner remains
 - **Matches between duos** — running the rounds between the generated pairs
+- **Number of rounds** — let the user define the number of rounds per match
 
 ---
 
@@ -89,7 +90,6 @@ Jokenpô
 
 - **Bye structure** — handling for when the number of players is odd
 - **Winners and losers list** — score tracking and display per round
-- **Number of rounds** — let the user define the number of rounds per match
 - **Menu customization** — improve the console interface with clearer options
 
 ---
