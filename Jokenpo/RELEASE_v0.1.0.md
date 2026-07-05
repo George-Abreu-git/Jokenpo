@@ -1,5 +1,5 @@
 # Jokenpo — v0.1.0 🎮✂️📄🪨
-> 🌐 Versão em português:[Jokenpo/RELEASE_v0.1.0.md](./Jokenpo/RELEASE_v0.1.0.pt-br.md)
+> 🌐 Versão em português: [RELEASE_v0.1.0.pt-br.md](./Jokenpo/RELEASE_v0.1.0.pt-br.md)
 
 First public release of **Jokenpo**, a Rock–Paper–Scissors tournament system developed in C#/.NET.
 
