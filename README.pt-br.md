@@ -9,23 +9,20 @@ Projeto de jogo de Jokenpô desenvolvido em **C# com .NET 10**, utilizado como p
 
 ## 📦 Última Release
 
-**Versão Atual:** **v0.1.0**
+**Versão Atual:** **v0.2.0**
 
-A primeira versão pública entrega o motor inicial do torneio como uma aplicação de console desenvolvida em .NET.
+A segunda versão pública entrega o motor inicial do torneio como uma aplicação de console desenvolvida em .NET.
 
 ### Destaques da Release
 
-- 🎮 Campeonato completo de Pedra, Papel e Tesoura
-- 👥 Quantidade de jogadores definida pelo usuário
-- 🏆 Progressão automática do torneio até restar apenas um campeão
-- 💻 Aplicação de console desenvolvida em C# e .NET
-- 🚀 Primeira versão oficial publicada do projeto
+- Quantidade de rodadas definida pelo usuário.
+- Mostrar cada rodada acontecendo com um intervalo entre as rodadas e as partidas.
 
 Esta versão tem como objetivo validar toda a lógica principal do jogo. Recursos como API REST, interface em React, persistência de dados e deploy em nuvem fazem parte das próximas etapas do roadmap.
 
 📄 Para consultar todas as informações da versão, acesse:
 
-- [`Jokenpo/RELEASE_v0.1.0.md`](./Jokenpo/RELEASE_v0.1.0.pt-br.md)
+- [`Jokenpo/RELEASE_v0.2.0.md`](./Jokenpo/RELEASE_v0.2.0.pt-br.md)
 
 ---
 
