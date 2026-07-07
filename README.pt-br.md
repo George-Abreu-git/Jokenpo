@@ -39,9 +39,9 @@ Jokenpô
 │   ├── ✅ Validação de jogadas e jogada aleatória
 │   ├── ✅ Enum de jogadas (Pedra, Papel, Tesoura)
 │   ├── ✅ Lógica do campeonato (em desenvolvimento)
-│   ├── ⏳ Estrutura de campeonato com Bye
+│   ├── ✅ Estrutura de campeonato com Bye
 │   ├── ✅ Partidas entre duplas
-│   ├── ⏳ Lista de vencedores e perdedores
+│   ├── ✅ Lista de vencedores e perdedores
 │   ├── ✅ Quantidade de rodadas definida pelo usuário
 │   ├── ✅ Sistema de campeonato até 1 vencedor
 │   └── ⏳ Personalização do menu
@@ -79,13 +79,13 @@ Jokenpô
 - **Partidas entre duplas** — execução das rodadas entre os pares gerados
 - **Sistema de campeonato completo** — eliminar jogadores até restar 1 único vencedor
 - **Quantidade de rodadas** — permitir que o usuário defina o número de rodadas por partida
+- **Estrutura de Bye** — tratamento para quando o número de jogadores é ímpar
+- **Lista de vencedores e perdedores** — controle e exibição do placar por rodada
 
 ---
 
 ## ⏳ O que falta desenvolver
 
-- **Estrutura de Bye** — tratamento para quando o número de jogadores é ímpar
-- **Lista de vencedores e perdedores** — controle e exibição do placar por rodada
 - **Personalização do menu** — melhorar a interface do console com opções mais claras
 
 ---

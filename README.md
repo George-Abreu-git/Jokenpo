@@ -40,9 +40,9 @@ Jokenpô
 │   ├── ✅ Move validation and random move
 │   ├── ✅ Move enum (Rock, Paper, Scissors)
 │   ├── ✅ Tournament logic (in progress)
-│   ├── ⏳ Tournament structure with Bye
+│   ├── ✅ Tournament structure with Bye
 │   ├── ✅ Matches between duos
-│   ├── ⏳ Winners and losers list
+│   ├── ✅ Winners and losers list
 │   ├── ✅ User-defined number of rounds
 │   ├── ✅ Single-winner tournament system
 │   └── ⏳ Menu customization
@@ -80,13 +80,13 @@ Jokenpô
 - **Full tournament system** — eliminate players until a single winner remains
 - **Matches between duos** — running the rounds between the generated pairs
 - **Number of rounds** — let the user define the number of rounds per match
+- **Bye structure** — handling for when the number of players is odd
+- **Winners and losers list** — score tracking and display per round
 
 ---
 
 ## ⏳ What's left to build
 
-- **Bye structure** — handling for when the number of players is odd
-- **Winners and losers list** — score tracking and display per round
 - **Menu customization** — improve the console interface with clearer options
 
 ---

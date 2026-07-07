@@ -20,10 +20,24 @@ namespace Jokenpo.Models
             {
 
                 players = PairsDraw.PairsRandom(players);
-                string[][] pairs = PairsDraw.CreatePairs(players);
+                string byeFixed = FixBye(players, out string[] playersWithoutBye);
+                string[][] pairs = PairsDraw.CreatePairs(playersWithoutBye);
                 string[] winners = RunRound(pairs, rounds);
+                
+                if(byeFixed != "")
+                {
+                    string[] winnersFull = new string[winners.Length+1];
+                    Array.Copy(winners, winnersFull, winners.Length);
+                    winnersFull[winnersFull.Length - 1] = byeFixed;
+                    players = winnersFull;
 
-                players = winners;
+                } else
+                {
+                    
+                    players = winners;    
+                }
+
+                
 
 
             }
@@ -39,6 +53,9 @@ namespace Jokenpo.Models
         {
             //atribui o tamanho de pairs em winners
             string[] winners = new string[pairs.Length];
+            string[] losersList = new string[pairs.Length];
+            string[] winnersList = new string[pairs.Length];
+            
 
 
 
@@ -49,6 +66,8 @@ namespace Jokenpo.Models
 
                 string player1 = pairs[i][0];
                 string player2 = pairs[i][1];
+                
+ 
 
 
 
@@ -58,7 +77,7 @@ namespace Jokenpo.Models
                     winners[i] = Match(pairs[i]);
 
                     Console.WriteLine($"{player1} x {player2}");
-
+                    
 
 
 
@@ -68,6 +87,7 @@ namespace Jokenpo.Models
                         victoryPlayer1++;
                         Thread.Sleep(2000);
                         Console.WriteLine($"{player1} ganhou {victoryPlayer1} rodadas!");
+                        
 
                     }
                     else
@@ -87,6 +107,8 @@ namespace Jokenpo.Models
                     winners[i] = player1;
                     Thread.Sleep(2000);
                     Console.WriteLine($"{player1} ganhou!");
+                    winnersList[i] = player1;
+                    losersList[i] = player2;
 
                 }
                 else
@@ -94,13 +116,30 @@ namespace Jokenpo.Models
                     winners[i] = player2;
                     Thread.Sleep(2000);
                     Console.WriteLine($"{player2} ganhou!");
+                    winnersList[i] = player2;
+                    losersList[i] = player1;
                 }
 
-
+                
 
             }
 
+            foreach(string winner in winnersList)
+            {
+               
+                Console.WriteLine($"Vencedores: {winner}");
+                
+            }
 
+            foreach(string loser in losersList)
+            {
+               
+                Console.WriteLine($"Perdedores: {loser}");
+                
+            }
+
+             //Console.WriteLine($"Perdedores: {losersList[i]} e Vencedores: {winnersList[i]}");
+           
             return winners;
         }
 
@@ -138,6 +177,31 @@ namespace Jokenpo.Models
 
 
 
+        }
+
+        public static string FixBye(string[] players, out string[] playersWithoutBye)
+        {
+            string bye = "";
+            string[]playersOutBye = new string[players.Length];
+
+            if(players.Length %2 != 0)
+            {
+
+                bye = players[players.Length -1];
+                Array.Copy(players, playersOutBye, players.Length -1);
+                playersWithoutBye = playersOutBye;
+                Console.WriteLine($"{bye}");   
+                
+            } else
+            {
+                Array.Copy(players, playersOutBye,players.Length);
+                playersWithoutBye = playersOutBye;
+                Console.WriteLine($"{bye}"); 
+            }
+            
+            
+            return bye;
+                      
         }
 
     }
