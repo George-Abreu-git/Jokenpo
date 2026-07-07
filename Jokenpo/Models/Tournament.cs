@@ -24,6 +24,7 @@ namespace Jokenpo.Models
                 string[][] pairs = PairsDraw.CreatePairs(playersWithoutBye);
                 string[] winners = RunRound(pairs, rounds);
                 
+                //Executa o tratamento de bye, para todos os jogadores terem chance de jogar
                 if(byeFixed != "")
                 {
                     string[] winnersFull = new string[winners.Length+1];
@@ -71,7 +72,7 @@ namespace Jokenpo.Models
 
 
 
-
+                //Validação para que os jogadores joguem enquanto não ganharem a quantidade de rounds definida pelo usuário
                 while (victoryPlayer1 != rounds && victoryPlayer2 != rounds)
                 {
                     winners[i] = Match(pairs[i]);
@@ -86,7 +87,15 @@ namespace Jokenpo.Models
                     {
                         victoryPlayer1++;
                         Thread.Sleep(2000);
-                        Console.WriteLine($"{player1} ganhou {victoryPlayer1} rodadas!");
+
+                        if(victoryPlayer1 == 1)
+                        {
+                            Console.WriteLine($"{player1} ganhou {victoryPlayer1} rodada!");    
+                        } else
+                        {
+                            Console.WriteLine($"{player1} ganhou {victoryPlayer1} rodadas!");    
+                        }
+                        
                         
 
                     }
@@ -94,7 +103,14 @@ namespace Jokenpo.Models
                     {
                         victoryPlayer2++;
                         Thread.Sleep(2000);
-                        Console.WriteLine($"{player2} ganhou {victoryPlayer2} rodadas!");
+
+                        if(victoryPlayer2 == 1)
+                        {
+                            Console.WriteLine($"{player1} ganhou {victoryPlayer1} rodada!");    
+                        } else
+                        {
+                            Console.WriteLine($"{player1} ganhou {victoryPlayer1} rodadas!");    
+                        }                        
     
                     }
 
@@ -102,6 +118,7 @@ namespace Jokenpo.Models
 
                 }
 
+                //tratamento para quando o player1 do par é ganhador e quando o player2 do par é ganhador
                 if (victoryPlayer1 == rounds)
                 {
                     winners[i] = player1;
@@ -127,14 +144,14 @@ namespace Jokenpo.Models
             foreach(string winner in winnersList)
             {
                
-                Console.WriteLine($"Vencedores: {winner}");
+                Console.WriteLine($"Vencedor: {winner}");
                 
             }
 
             foreach(string loser in losersList)
             {
                
-                Console.WriteLine($"Perdedores: {loser}");
+                Console.WriteLine($"Perdedor: {loser}");
                 
             }
 
@@ -179,24 +196,28 @@ namespace Jokenpo.Models
 
         }
 
+        //Faz tratamento de número impar após a primeira partida de duplas virar ímpar
         public static string FixBye(string[] players, out string[] playersWithoutBye)
         {
+
             string bye = "";
             string[]playersOutBye = new string[players.Length];
 
+            //verifica se o tamanho de jogadores é ímpar
             if(players.Length %2 != 0)
             {
-
+                //Copia o ultimo player para bye, copia a array sem o ultimo para playersOutBye, define playersWithouBye com quantidade par
                 bye = players[players.Length -1];
                 Array.Copy(players, playersOutBye, players.Length -1);
                 playersWithoutBye = playersOutBye;
-                Console.WriteLine($"{bye}");   
+                Console.WriteLine($"Sobrou: {bye}");   
                 
             } else
-            {
+            {   
+                //mantém quantidade e define playersWithouBye como players (já é par)
                 Array.Copy(players, playersOutBye,players.Length);
                 playersWithoutBye = playersOutBye;
-                Console.WriteLine($"{bye}"); 
+                Console.WriteLine($"Não sobrou player"); 
             }
             
             
