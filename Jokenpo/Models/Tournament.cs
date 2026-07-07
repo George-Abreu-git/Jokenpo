@@ -86,7 +86,7 @@ namespace Jokenpo.Models
                     if (winners[i] == player1)
                     {
                         victoryPlayer1++;
-                        Thread.Sleep(2000);
+                        Thread.Sleep(1000);
 
                         if(victoryPlayer1 == 1)
                         {
@@ -102,14 +102,14 @@ namespace Jokenpo.Models
                     else
                     {
                         victoryPlayer2++;
-                        Thread.Sleep(2000);
+                        Thread.Sleep(1000);
 
                         if(victoryPlayer2 == 1)
                         {
-                            Console.WriteLine($"{player1} ganhou {victoryPlayer1} rodada!");    
+                            Console.WriteLine($"{player2} ganhou {victoryPlayer2} rodada!");    
                         } else
                         {
-                            Console.WriteLine($"{player1} ganhou {victoryPlayer1} rodadas!");    
+                            Console.WriteLine($"{player2} ganhou {victoryPlayer2} rodadas!");    
                         }                        
     
                     }
@@ -122,7 +122,7 @@ namespace Jokenpo.Models
                 if (victoryPlayer1 == rounds)
                 {
                     winners[i] = player1;
-                    Thread.Sleep(2000);
+                    Thread.Sleep(1000);
                     Console.WriteLine($"{player1} ganhou!");
                     winnersList[i] = player1;
                     losersList[i] = player2;
@@ -131,7 +131,7 @@ namespace Jokenpo.Models
                 else
                 {
                     winners[i] = player2;
-                    Thread.Sleep(2000);
+                    Thread.Sleep(1000);
                     Console.WriteLine($"{player2} ganhou!");
                     winnersList[i] = player2;
                     losersList[i] = player1;
