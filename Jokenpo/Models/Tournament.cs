@@ -75,9 +75,11 @@ namespace Jokenpo.Models
                 //Validação para que os jogadores joguem enquanto não ganharem a quantidade de rounds definida pelo usuário
                 while (victoryPlayer1 != rounds && victoryPlayer2 != rounds)
                 {
+                    Console.WriteLine($"{player1} x {player2}");
+
                     winners[i] = Match(pairs[i]);
 
-                    Console.WriteLine($"{player1} x {player2}");
+                    
                     
 
 
@@ -88,15 +90,7 @@ namespace Jokenpo.Models
                         victoryPlayer1++;
                         Thread.Sleep(1000);
 
-                        if(victoryPlayer1 == 1)
-                        {
-                            Console.WriteLine($"{player1} ganhou {victoryPlayer1} rodada!");    
-                        } else
-                        {
-                            Console.WriteLine($"{player1} ganhou {victoryPlayer1} rodadas!");    
-                        }
-                        
-                        
+                        Console.WriteLine($"{player1}: {victoryPlayer1} x {victoryPlayer2} :{player2} ");                        
 
                     }
                     else
@@ -104,13 +98,7 @@ namespace Jokenpo.Models
                         victoryPlayer2++;
                         Thread.Sleep(1000);
 
-                        if(victoryPlayer2 == 1)
-                        {
-                            Console.WriteLine($"{player2} ganhou {victoryPlayer2} rodada!");    
-                        } else
-                        {
-                            Console.WriteLine($"{player2} ganhou {victoryPlayer2} rodadas!");    
-                        }                        
+                        Console.WriteLine($"{player1}: {victoryPlayer1} x {victoryPlayer2} :{player2} ");                        
     
                     }
 
@@ -166,6 +154,8 @@ namespace Jokenpo.Models
             //player1 e jogador 2 recebem 0 e 1 da lista de par
             string player1 = pair[0];
             string player2 = pair[1];
+            string movePlayer1 = "";
+            string movePlayer2 = "";
 
             int move1 = 0;
             int move2 = 0;
@@ -177,17 +167,26 @@ namespace Jokenpo.Models
             {
                 move1 = Play.RandomPlay();
                 move2 = Play.RandomPlay();
+                
 
                 result = Play.DetermineWinner(move1, move2);
 
             }
 
             if (result == move1)
-            {
+            {   
+                movePlayer1 = Play.MoveName(move1);
+                movePlayer2 = Play.MoveName(move2);
+                Console.WriteLine($"{player1} jogou {movePlayer1}");
+                Console.WriteLine($"{player2} jogou {movePlayer2}");
                 return player1;
             }
             else
-            {
+            {   
+                movePlayer1 = Play.MoveName(move1);
+                movePlayer2 = Play.MoveName(move2);
+                Console.WriteLine($"{player1} jogou {movePlayer1}");
+                Console.WriteLine($"{player2} jogou {movePlayer2}");
                 return player2;
             }
 

@@ -52,7 +52,29 @@ namespace Jokenpo.Models
 
             return numRandom.Next(1,4);
             
-        }       
+        }
+
+
+        public static string MoveName(int move)
+        {
+            string moveWin = "";
+
+            switch (move)
+            {
+                case 1:
+                    moveWin = "Pedra";
+                    break;
+                case 2: 
+                moveWin = "Papel";
+                    break;
+                case 3:
+                    moveWin = "Tesoura";
+                    break;
+            }
+
+
+            return moveWin;
+        }
         
        
        
