@@ -9,20 +9,21 @@ Projeto de jogo de Jokenpô desenvolvido em **C# com .NET 10**, utilizado como p
 
 ## 📦 Última Release
 
-**Versão Atual:** **v0.2.0**
+**Versão Atual:** **v0.3.0**
 
-A segunda versão pública entrega o motor inicial do torneio como uma aplicação de console desenvolvida em .NET.
+A terceira versão pública entrega o motor inicial do torneio como uma aplicação de console desenvolvida em .NET.
 
 ### Destaques da Release
 
-- Quantidade de rodadas definida pelo usuário.
-- Mostrar cada rodada acontecendo com um intervalo entre as rodadas e as partidas.
+- Sistema de bye: quando o número de jogadores é ímpar, um jogador é automaticamente avançado de rodada sem enfrentar oponente.
+- Validação no console: exibe quem ficou de fora (bye) na rodada, deixando claro pro usuário quem avançou automaticamente.
+- Lista de vencedores e perdedores: ao final de cada rodada/torneio, o console agora exibe separadamente quem venceu e quem foi eliminado.
 
 Esta versão tem como objetivo validar toda a lógica principal do jogo. Recursos como API REST, interface em React, persistência de dados e deploy em nuvem fazem parte das próximas etapas do roadmap.
 
 📄 Para consultar todas as informações da versão, acesse:
 
-- [`Jokenpo/RELEASE_v0.2.0.md`](./Jokenpo/RELEASE_v0.2.0.pt-br.md)
+- [`Jokenpo/RELEASE_v0.3.0.md`](./Jokenpo/RELEASE_v0.3.0.pt-br.md)
 
 ---
 

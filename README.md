@@ -9,20 +9,21 @@ Rock-Paper-Scissors tournament game built in **C# with .NET 10**, used as a lear
 
 ## 📦 Latest Release
 
-**Current Version:** **v0.2.0**
+**Current Version:** **v0.3.0**
 
-The second public release delivers the initial tournament engine for the project as a .NET console application.
+The third public release delivers the initial tournament engine for the project as a .NET console application.
 
 ### Release Highlights
 
-- User-defined number of rounds.
-- Displays each round in real time with a delay between rounds and matches.
+- Bye system: when the number of players is odd, one player automatically advances to the next round without facing an opponent.
+- Console validation: displays which player got the bye in the round, making it clear to the user who advanced automatically.
+- Winners and losers list: at the end of each round/tournament, the console now displays winners and eliminated players separately.
 
 This version focuses on validating the game's core logic. Features such as a REST API, React front-end, persistent storage, and cloud deployment are planned for future releases.
 
 📄 For complete release notes, see:
 
-- [`Jokenpo/RELEASE_v0.2.0.md`](./Jokenpo/RELEASE_v0.2.0.md)
+- [`Jokenpo/RELEASE_v0.3.0.md`](./Jokenpo/RELEASE_v0.3.0.md)
 
 
 ---
