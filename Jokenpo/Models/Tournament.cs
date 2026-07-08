@@ -13,6 +13,7 @@ namespace Jokenpo.Models
         {
             string[] players = GetPlayers.GetNameOfPlayers();
             int rounds = GetRounds.SetRounds();
+            bool options = true;
 
 
 
@@ -43,8 +44,28 @@ namespace Jokenpo.Models
 
             }
 
+            while(options)
+            {
+                Console.WriteLine($"O campeão é {players[0]}");
 
-            Console.WriteLine($"O campeão é {players[0]}");
+                Console.WriteLine($"Pressione 1 para jogar novamente!");
+                Console.WriteLine($"Pressione 0 para encerrar!");
+                
+                switch (Console.ReadLine())
+                {
+                    case "1":
+                        GameMenu.MenuExe();
+                        break;
+                    case "0":
+                        options = false;
+                        Environment.Exit(0);
+                        break;
+                }
+
+                Console.ReadLine();    
+            }
+
+            
 
         }
 

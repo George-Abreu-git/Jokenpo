@@ -30,7 +30,7 @@ namespace Jokenpo.Models
 
             while (true)
             {
-                Console.Write($"Digite a quantidade de jogadores (número par) : ");
+                Console.Write($"Digite a quantidade de jogadores : ");
                 string? rawInput = Console.ReadLine();
 
                 if (rawInput != null && int.TryParse(rawInput, out input) && IsValidQuantity(input))
@@ -38,14 +38,14 @@ namespace Jokenpo.Models
                     return input;
                 }
                 Console.Clear();
-                Console.WriteLine($"Apenas número par.");
+                Console.WriteLine($"Mínimo 2 jogadores");
 
             }
         }
 
         private static bool IsValidQuantity(int amount)
         {
-            return amount > 0 && amount % 2 == 0;
+            return amount > 1;
         }
 
 
