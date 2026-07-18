@@ -2,6 +2,7 @@
 using Jokenpo.Models;
 
 
+
 namespace Jokenpo;
 
 class Program

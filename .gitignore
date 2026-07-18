@@ -365,3 +365,7 @@ FodyWeavers.xsd
 #Release
 release-assets/
 RELEASE_v*.md
+
+#Enviroment
+*.env
+*Enviroment
