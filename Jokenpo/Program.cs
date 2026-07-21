@@ -1,16 +1,12 @@
-﻿using System;
-using Jokenpo.Models;
+﻿using Jokenpo.Models;
 
-
-
-namespace Jokenpo;
-
-class Program
+namespace Program
 {
-    static void Main (string[] args)
+    public class Program
     {
-        Console.WriteLine("Bem Vindo ao Jokenpo");
+        public static void Main()
+        {
 
-        GameMenu.MenuExe();
+        }
     }
 }
